@@ -18,8 +18,8 @@ Montrer qu’un **document manuscrit réel**, même en italique ou stylisé, peu
 
 ## 🗂️ Arborescence du dépôt
 
-- `README.md` : version anglaise
-- `README_FR.md` : version française
+- `README.md` : version française
+- `README_En.md` : version anglaise / english version
 
 ### 📁 `code/`
 - `n8n_Mistral_blueprint.json` : blueprint exporté du workflow n8n pour reproduction
