@@ -76,7 +76,7 @@ Dans ce document PDF, Le Chat met en lumière les capacités de notre dépôt à
 
 _"Regardes, Le Chat : Tu es à l'honneur sur mon dernier dépôt GitHub, consacré à Mistral IA !"_
 
-👉 [Consulter le rapport](./)
+👉 [Consulter le rapport](./Report_Le_Chat/Rapport_Le_Chat.pdf)
 
 ---
 
