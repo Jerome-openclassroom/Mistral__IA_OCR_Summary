@@ -19,8 +19,8 @@ Demonstrate that a **real handwritten document**, even in stylized italic fonts,
 
 ## 🗂️ Repository structure
 
-- `README.md` : this English version
-- `README_FR.md` : French version
+- `README_En.md` : this English version
+- `README.md` : French version
 
 ### 📁 `code/`
 - `n8n_Mistral_blueprint.json`: exportable blueprint of the n8n workflow
