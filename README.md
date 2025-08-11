@@ -31,6 +31,9 @@ Montrer qu’un **document manuscrit réel**, même en italique ou stylisé, peu
 - `README.md` : version française
 - `README_En.md` : version anglaise / english version
 
+### 📁 Report_Le_Chat/
+- `Rapport_Le_Chat.pdf` :  document généré par Le Chat (interface Mistral IA) via DeepSearch
+
 ### 📁 `code/`
 - `n8n_Mistral_blueprint.json` : blueprint exporté du workflow n8n pour reproduction
 - `n8n_Mistral_Notebook.ipynb` : notebook Python pour encoder l’image et déclencher le webhook n8n
