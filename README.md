@@ -7,6 +7,7 @@
 ![OCR_Ready](https://img.shields.io/badge/📷%20OCR--ready-Mistral-blue)
 ![LLM_Mistral](https://img.shields.io/badge/🧠%20LLM-Mistral_Small-lightblue)
 ![Realtime](https://img.shields.io/badge/⚡%20Realtime--processing-yes-brightgreen)
+![LLM-analyzed](https://img.shields.io/badge/🧠%20LLM--analyzed-Mistral-success)
 
 
 
