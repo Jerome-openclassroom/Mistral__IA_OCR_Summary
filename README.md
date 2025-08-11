@@ -56,7 +56,7 @@ Ce projet est **100% reproductible** :
 ## 🙌 Technologies utilisées
 
 - [n8n.io](https://n8n.io)
-- [Mistral AI](https://console.mistral.ai)
+- [Mistral AI](https://mistral.ai/fr)
 - Google Sheets (via n8n)
 
 ---
