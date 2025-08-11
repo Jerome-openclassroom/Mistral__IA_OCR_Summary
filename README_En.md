@@ -2,6 +2,12 @@
 
 # Automated Weather Report from OCR — 🇫🇷 Mistral-Powered Demo Project
 
+![EUstack](https://img.shields.io/badge/🇪🇺%20EUstack-ready-blue)
+![SouverainAI](https://img.shields.io/badge/🇫🇷%20SouverainAI-oui-success)
+![OCR_Ready](https://img.shields.io/badge/📷%20OCR--ready-Mistral-blue)
+![LLM_Mistral](https://img.shields.io/badge/🧠%20LLM-Mistral_Small-lightblue)
+![Realtime](https://img.shields.io/badge/⚡%20Realtime--processing-yes-brightgreen)
+
 This repository showcases a complete AI-powered pipeline, turning a handwritten weather log image into a **clean, structured summary automatically emailed and archived**, using:
 
 - ✅ **Mistral OCR** (French high-performance optical character recognition)
