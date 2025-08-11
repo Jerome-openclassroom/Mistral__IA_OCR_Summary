@@ -73,7 +73,8 @@ Ce projet est **100% reproductible** :
 
 📄 Rapport technique généré par Mistral (“Le Chat”)
 
-Dans ce document PDF, Le Chat met en lumière les capacités de notre dépôt à travers l’intégration de Mistral Mini et Mistral OCR. Une synthèse illustrée, expliquant comment ce dépôt s'intègre dans l'écosystème GitHub consacré à Mistral IA, produite en réponse au prompt :
+Dans ce document PDF, Le Chat met en lumière les capacités de notre dépôt à travers l’intégration de Mistral Mini et Mistral OCR. 
+Une synthèse illustrée, expliquant comment ce dépôt s'intègre dans l'écosystème GitHub consacré à Mistral IA, produite en réponse au prompt :
 
 _"Regardes, Le Chat : Tu es à l'honneur sur mon dernier dépôt GitHub, consacré à Mistral IA !"_
 
