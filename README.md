@@ -7,7 +7,7 @@
 ![OCR_Ready](https://img.shields.io/badge/📷%20OCR--ready-Mistral-blue)
 ![LLM_Mistral](https://img.shields.io/badge/🧠%20LLM-Mistral_Small-lightblue)
 ![Realtime](https://img.shields.io/badge/⚡%20Realtime--processing-yes-brightgreen)
-![Colab_triggered](https://img.shields.io/badge/📤%20Triggered_from-Colab-yellow)
+
 
 
 Ce dépôt présente un projet complet de démonstration d’un pipeline IA 100% fonctionnel, permettant de transformer une image de notes météo manuscrites en un **résumé lisible, structuré et envoyé automatiquement par email**, le tout en utilisant :
