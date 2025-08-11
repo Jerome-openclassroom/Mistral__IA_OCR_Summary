@@ -1,0 +1,244 @@
+{
+  "name": "n8n_Mistral",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "3b3d7051-98ce-4aa9-b96e-3309852969da",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -32,
+        -32
+      ],
+      "id": "6eecf5c3-0df3-4c24-96aa-f36f7fe0171b",
+      "name": "Webhook",
+      "webhookId": "3b3d7051-98ce-4aa9-b96e-3309852969da"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.extractedText }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Tu reçois une série de notes décrivant la météo sur plusieurs jours. Rédiges une note synthétique d'un seul bloc."
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        400,
+        -32
+      ],
+      "id": "9ce6ddbc-f501-4ebc-8913-84b4a7c98c56",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "documentType": "image_url",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mistralAi",
+      "typeVersion": 1,
+      "position": [
+        192,
+        -32
+      ],
+      "id": "c07f3460-c279-4cdc-b116-9f860ace7a60",
+      "name": "OCR Mistral",
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "a79SHEq8GQASp16V",
+          "name": "Mistral Cloud account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+      "typeVersion": 1,
+      "position": [
+        320,
+        192
+      ],
+      "id": "8b37dc4c-034a-469a-85fb-6ec211dbd744",
+      "name": "Modèle Mistral Mini",
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "a79SHEq8GQASp16V",
+          "name": "Mistral Cloud account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1S1Sf0l2N9F-ktCSBpmNeaNNFUFCCWJKXAYbTFJI-EHw",
+          "mode": "list",
+          "cachedResultName": "Comptes_rendus",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1S1Sf0l2N9F-ktCSBpmNeaNNFUFCCWJKXAYbTFJI-EHw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Feuille 1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1S1Sf0l2N9F-ktCSBpmNeaNNFUFCCWJKXAYbTFJI-EHw/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Date": "={{ $today }}",
+            "Compte rendu ": "={{ $json.text }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Compte rendu ",
+              "displayName": "Compte rendu ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        768,
+        -32
+      ],
+      "id": "9fbf83b6-fcff-4bec-9ed4-201dc7e3f6c6",
+      "name": "Sauvegarde du compte rendu ",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "31LaukvmbfzpoFVr",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "jerome.frasson.vsi@gmail.com",
+        "subject": "Résumé Météo après OCR",
+        "emailType": "text",
+        "message": "={{ $json.text }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1008,
+        -32
+      ],
+      "id": "5f8d8edc-c501-4553-955d-702b4a6b4733",
+      "name": "Envoyer le compte rendu par mail",
+      "webhookId": "ab1f6253-61f0-4414-a781-3746e65622a3",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1p5L8t0Ti7Odu8ke",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "OCR Mistral",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Sauvegarde du compte rendu ",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OCR Mistral": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Modèle Mistral Mini": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sauvegarde du compte rendu ": {
+      "main": [
+        [
+          {
+            "node": "Envoyer le compte rendu par mail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Envoyer le compte rendu par mail": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e40e834b-79cc-46c8-a688-6c9e81bbde8c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "779524e63dbde32a73cbf739cde16780b056dc31072ff92c4fdba4f2d62e9ee8"
+  },
+  "id": "4lXdJgYYUl2HfUbp",
+  "tags": []
+}
