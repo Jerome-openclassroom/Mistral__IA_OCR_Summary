@@ -1,3 +1,4 @@
+<img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" width="100px" height="auto" />
 
 # Automated Weather Report from OCR — 🇫🇷 Mistral-Powered Demo Project
 
