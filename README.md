@@ -1,4 +1,4 @@
-
+![France](https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg)
 # Résumé météo OCR automatisé — Projet démonstratif IA 🇫🇷
 
 Ce dépôt présente un projet complet de démonstration d’un pipeline IA 100% fonctionnel, permettant de transformer une image de notes météo manuscrites en un **résumé lisible, structuré et envoyé automatiquement par email**, le tout en utilisant :
