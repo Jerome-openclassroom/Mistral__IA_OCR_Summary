@@ -24,6 +24,7 @@ Demonstrate that a **real handwritten document**, even in stylized italic fonts,
 - summarized in fluent, professional French,
 - sent and archived automatically via a modern no-code workflow.
 
+> ⚠️ API keys and webhook URLs have been removed for security reasons. Please replace them with your own values in order to reproduce the workflows.
 ---
 
 ## 🗂️ Repository structure
