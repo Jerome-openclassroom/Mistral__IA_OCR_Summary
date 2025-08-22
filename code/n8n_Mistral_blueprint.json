@@ -4,7 +4,7 @@
     {
       "parameters": {
         "httpMethod": "POST",
-        "path": "3b3d7051-98ce-4aa9-b96e-3309852969da",
+        "path": "Le_CHIEN_!",
         "options": {}
       },
       "type": "n8n-nodes-base.webhook",
@@ -15,7 +15,7 @@
       ],
       "id": "6eecf5c3-0df3-4c24-96aa-f36f7fe0171b",
       "name": "Webhook",
-      "webhookId": "3b3d7051-98ce-4aa9-b96e-3309852969da"
+      "webhookId": "..."
     },
     {
       "parameters": {
