@@ -9,6 +9,8 @@
 ![Realtime](https://img.shields.io/badge/⚡%20Realtime--processing-yes-brightgreen)
 ![LLM-analyzed](https://img.shields.io/badge/🧠%20LLM--analyzed-Mistral-success)
 
+> ⚠️ Les clés API et les URL de webhook ont été supprimées pour des raisons de sécurité.  
+> Veuillez les remplacer par vos propres valeurs afin de pouvoir reproduire les workflows.
 
 
 Ce dépôt présente un projet complet de démonstration d’un pipeline IA 100% fonctionnel, permettant de transformer une image de notes météo manuscrites en un **résumé lisible, structuré et envoyé automatiquement par email**, le tout en utilisant :
